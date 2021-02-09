@@ -15,7 +15,7 @@ select userID, userName
 select userID, userName
   from usertbl
  where birthYear >= 1970
-	or height >= 182;
+	  or height >= 182;
 
 -- 키가 180 ~ 183사이인 사람만 조회
 select userID, userName, height
@@ -112,7 +112,7 @@ select userID, sum(amount) as '합계'
 
  -- min, max
 select min(height) as '작은키'
-   from userTbl;
+  from userTbl;
 
 select max(height) as '큰키'
   from userTbl;
@@ -151,8 +151,8 @@ select userID, groupName, sum(price * amount) as '구매금액'
  -- CTE x
  select userID, sum(price * amount) as 'total'
    from buyTbl
-   group by userID
-   order by sum(price * amount) desc;
+  group by userID
+  order by sum(price * amount) desc;
 
 -- CTE o
 with cte_temp(userID, total) -- cte 가상 테이블 만듦
