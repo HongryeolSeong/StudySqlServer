@@ -12,3 +12,8 @@ select stdName, region from stdTbl;
 select stdName, region from stdTbl
 except
 select stdName, region from stdTbl;
+
+-- intersect
+select userName, mobile1 + mobile2 as [전화번호] from userTbl
+intersect
+select userName, mobile1 + mobile2 from userTbl where mobile1 is null;
