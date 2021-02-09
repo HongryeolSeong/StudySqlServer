@@ -27,3 +27,10 @@ select * from pivotTBL
  pivot (sum(amount)
         for season
 		in ([봄], [여름], [가을], [겨울])) as resultPivot;
+
+
+-- JSON
+select userID, userName, addr, height
+  from userTbl
+ where height >= 180
+   for json auto;
