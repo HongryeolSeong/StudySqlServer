@@ -14,7 +14,6 @@ print @curYear;
 print replicate('0', 2 - len(@curMonth)) + @curMonth; -- 한자리수 앞에 0붙이기
 print right(('00' + @curMonth), 2); -- 한자리수 앞에 0붙이기
 print @curDay;
-
 print format(@curDate, 'yyyy-MM-dd');
 
 set @sql = 'create table backup_' + format(@curDate, 'yyyy_MM_dd');
