@@ -14,7 +14,7 @@ select p.product_id, p.product_name,
     on p.brand_id = b.brand_id
 
 -- 판매 리스트 확인
-select od.order_id, concat(ct.first_name, ' ', ct.last_name) as full_name, 
+select od.order_id, concat(ct.first_name, ' ', ct.last_name) as full_name,
        case od.order_status
 	    when 1 then '주문완료'
 		when 2 then '결제완료'
